@@ -52,3 +52,9 @@ variable "input_tags" {
     Provisioner = "Terraform"
   }
 }
+
+variable "stickiness" {
+  description = "Stickiness configuration block to use"
+  type        = map(string)
+  default     = {}
+}

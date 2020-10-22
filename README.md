@@ -18,6 +18,12 @@ module "lb-target-group" {
   target_group_health_path     = "/"
   target_group_health_response = 200
 
+  stickiness = {
+    type = "lb_cookie"
+    cookie_duration = 21600
+    enabled = true
+  }
+
   input_tags = merge(local.common_tags, {})
 }
 ```
