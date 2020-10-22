@@ -25,7 +25,7 @@ resource "aws_lb_target_group" "this" {
   }
 
   dynamic "stickiness" {
-    for_each = compact([lookup({temp = var.stickiness}, "type", "")]) # type is a required value. If not present, don't set stickiness
+    for_each = compact([lookup(var.stickiness, "type", "")]) # type is a required value. If not present, don't set stickiness
     content {
       type            = lookup(var.stickiness, "type", "")
       cookie_duration = lookup(var.stickiness, "cookie_duration", "")
