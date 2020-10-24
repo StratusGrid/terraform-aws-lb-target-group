@@ -39,8 +39,8 @@ variable "target_group_health_path" {
 }
 
 variable "target_group_health_response" {
-  description = "Response code for health check to be deemed healthy. Default is 200"
-  type        = number
+  description = "Response code for health indicator. Can be single, comma separated, or ranges. Default is 200"
+  type        = string
   default     = 200
 }
 
