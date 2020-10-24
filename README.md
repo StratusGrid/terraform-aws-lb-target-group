@@ -5,7 +5,7 @@ lb-target-group creates a target group with a random name appended to the end wi
 ```
 module "lb-target-group" {
   source  = "StratusGrid/lb-target-group/aws"
-  version = "1.0.0"
+  version = "1.1.0"
   # source  = "github.com/StratusGrid/terraform-aws-lb-target-group"
 
   vpc_id = module.vpc_microservices.vpc_id
