@@ -22,6 +22,7 @@ resource "aws_lb_target_group" "this" {
     path     = var.target_group_health_path
     interval = var.target_group_health_interval
     matcher  = var.target_group_health_response
+    port     = var.target_group_health_port
   }
 
   dynamic "stickiness" {

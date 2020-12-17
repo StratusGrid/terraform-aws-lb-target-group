@@ -38,6 +38,12 @@ variable "target_group_health_path" {
   default     = "/"
 }
 
+variable "target_group_health_port" {
+  description = "Override port for health check, otherwise this will be traffic port."
+  type        = string
+  default     = "traffic-port"
+}
+
 variable "target_group_health_response" {
   description = "Response code for health indicator. Can be single, comma separated, or ranges. Default is 200"
   type        = string
