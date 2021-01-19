@@ -18,7 +18,7 @@ resource "aws_lb_target_group" "this" {
   target_type = var.target_group_type
   health_check {
     enabled  = true
-    protocol = var.target_group_protocol
+    protocol = coalesce(var.target_group_health_protocol, var.target_group_protocol)
     path     = var.target_group_health_path
     interval = var.target_group_health_interval
     matcher  = var.target_group_health_response

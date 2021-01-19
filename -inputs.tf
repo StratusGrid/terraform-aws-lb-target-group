@@ -26,6 +26,12 @@ variable "target_group_protocol" {
   default     = "HTTPS"
 }
 
+variable "target_group_health_protocol" {
+  description = "Override protocol for health check, otherwise this will match traffic protocol"
+  type        = string
+  default     = ""
+}
+
 variable "target_group_health_interval" {
   description = "Interval for health checks"
   type        = number
