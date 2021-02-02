@@ -23,6 +23,7 @@ resource "aws_lb_target_group" "this" {
     interval = var.target_group_health_interval
     matcher  = var.target_group_health_response
     port     = var.target_group_health_port
+    timeout  = var.target_group_health_timeout
   }
 
   dynamic "stickiness" {

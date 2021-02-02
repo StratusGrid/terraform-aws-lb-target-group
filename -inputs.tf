@@ -50,6 +50,12 @@ variable "target_group_health_port" {
   default     = "traffic-port"
 }
 
+variable "target_group_health_timeout" {
+  description = "Override timeout for health check for health check, otherwise this will be one second."
+  type        = number
+  default     = 5
+}
+
 variable "target_group_health_response" {
   description = "Response code for health indicator. Can be single, comma separated, or ranges. Default is 200"
   type        = string
