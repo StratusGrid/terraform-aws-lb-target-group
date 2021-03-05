@@ -62,6 +62,18 @@ variable "target_group_health_response" {
   default     = 200
 }
 
+variable "target_group_hc_healthy_threshold" {
+  description = "Number of consecutive health checks successes required before considering an unhealthy target healthy. Default is 3"
+  type        = number
+  default     = 3
+}
+
+variable "target_group_hc_unhealthy_threshold" {
+  description = "Number of consecutive health check failures required before considering the target unhealthy. Default is 3"
+  type        = number
+  default     = 3
+}
+
 variable "input_tags" {
   description = "Map of tags to apply to resources"
   type        = map(string)
