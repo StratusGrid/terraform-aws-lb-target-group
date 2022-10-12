@@ -1,0 +1,44 @@
+version: ""
+
+formatter: markdown table
+
+name:  terraform-aws-lb-target-group
+
+content: |-
+  # terraform-aws-lb-target-group
+
+  GitHub: [StratusGrid/terraform-aws-lb-target-group](https://github.com/StratusGrid/terraform-aws-lb-target-group)
+
+  This module creates a target group with a random name appended to the end with the proper lifecycle rules able to be replaced. 
+  
+  ## Example:
+  ```hcl
+  {{ include "examples/example1.tfnot" }}
+  ```
+  ---
+
+  {{ .Resources }}
+
+  {{ .Inputs }}
+
+  {{ .Outputs }}
+
+  ---
+
+  <span style="color:red">Note:</span> Manual changes to the README will be overwritten when the documentation is updated. To update the documentation, run `terraform-docs -c .config/.terraform-docs.yml .`
+
+sections:
+  show:
+    - resources
+    - inputs
+    - outputs
+    - providers
+    - requirements
+
+sort:
+  enabled: true
+  by: name
+
+output:
+  file: README.md
+  mode: replace
