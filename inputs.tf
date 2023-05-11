@@ -26,6 +26,11 @@ variable "target_group_protocol" {
   default     = "HTTPS"
 }
 
+variable "target_group_protocol_version" {
+  description = "Protocol version to send to targets (Optional, Forces new resource). Only used when target_group_protocol is HTTP/HTTPS"
+  default     = "HTTP1"
+}
+
 variable "target_group_health_protocol" {
   description = "Override protocol for health check, otherwise this will match traffic protocol"
   type        = string
