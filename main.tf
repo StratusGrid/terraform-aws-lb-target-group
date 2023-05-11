@@ -10,10 +10,11 @@ resource "random_id" "this" {
 }
 
 resource "aws_lb_target_group" "this" {
-  name     = "${var.target_group_name_prefix}-${random_id.this.hex}"
-  port     = var.target_group_port
-  protocol = var.target_group_protocol
-  vpc_id   = var.vpc_id
+  name             = "${var.target_group_name_prefix}-${random_id.this.hex}"
+  port             = var.target_group_port
+  protocol         = var.target_group_protocol
+  protocol_version = length(regexall("^HTTP+", var.target_group_protocol)) > 0 ? var.target_group_protocol_version : null
+  vpc_id           = var.vpc_id
 
   target_type = var.target_group_type
   health_check {

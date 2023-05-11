@@ -57,6 +57,7 @@ module "lb-target-group" {
 | <a name="input_target_group_name_prefix"></a> [target\_group\_name\_prefix](#input\_target\_group\_name\_prefix) | name prefix (pre-random) of target group to be created | `string` | n/a | yes |
 | <a name="input_target_group_port"></a> [target\_group\_port](#input\_target\_group\_port) | Port configuration for LB Target group | `number` | `443` | no |
 | <a name="input_target_group_protocol"></a> [target\_group\_protocol](#input\_target\_group\_protocol) | Protocol configuration for LB Target group | `string` | `"HTTPS"` | no |
+| <a name="input_target_group_protocol_version"></a> [target\_group\_protocol\_version](#input\_target\_group\_protocol\_version) | Protocol version to send to targets (Optional, Forces new resource). Only used when target\_group\_protocol is HTTP/HTTPS | `string` | `"HTTP1"` | no |
 | <a name="input_target_group_type"></a> [target\_group\_type](#input\_target\_group\_type) | Target type (ip/instance, lambda is not supported by this module) | `string` | `"ip"` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | ID of VPC which the resource should be created in | `string` | n/a | yes |
 
