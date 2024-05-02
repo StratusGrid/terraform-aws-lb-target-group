@@ -75,6 +75,7 @@ module "lb-target-group" {
 | Name | Description |
 |------|-------------|
 | <a name="output_target_group_arn"></a> [target\_group\_arn](#output\_target\_group\_arn) | ARN of target group created by module. |
+| <a name="output_target_group_arn_suffix"></a> [target\_group\_arn\_suffix](#output\_target\_group\_arn\_suffix) | ARN suffix for use with CloudWatch Metrics |
 | <a name="output_target_group_id"></a> [target\_group\_id](#output\_target\_group\_id) | ID of target group created by module. |
 | <a name="output_target_group_name"></a> [target\_group\_name](#output\_target\_group\_name) | Name of target group created by module. |
 | <a name="output_target_group_port"></a> [target\_group\_port](#output\_target\_group\_port) | Destination port of the targets of target group created by module. |

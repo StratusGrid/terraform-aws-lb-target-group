@@ -8,6 +8,11 @@ output "target_group_arn" {
   value       = aws_lb_target_group.this.arn
 }
 
+output "target_group_arn_suffix" {
+  description = "ARN suffix for use with CloudWatch Metrics"
+  value       = aws_lb_target_group.this.arn_suffix
+}
+
 output "target_group_name" {
   description = "Name of target group created by module."
   value       = aws_lb_target_group.this.name
